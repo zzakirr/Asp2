@@ -32,17 +32,15 @@ namespace Lesson2
             {
                 endpoints.MapControllerRoute(
                        "default",
-                       "{controller=home}/{action=index}"
+                       "{controller=home}/{action=index}/{id?}"
                     );
                 endpoints.MapControllerRoute(
-                        "about",
-                        "about.html",
-                        defaults: new { controller = "home",action = "about"}
+                       "about",
+                       "{controller}/{action}/{id?}"
                     );
                 endpoints.MapControllerRoute(
-                        "services",
-                        "services.html",
-                        defaults: new { controller = "home", action = "services" }
+                       "service",
+                       "{controller}/{action}/{id?}"
                     );
             });
         }
